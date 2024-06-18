@@ -1,6 +1,7 @@
 #1. command line
 #2. tfvars
 #3. default values
+#4. variable default value
 variable "image_id" {
   type    = string
   default = "ami-0b4f379183e5706b9"
