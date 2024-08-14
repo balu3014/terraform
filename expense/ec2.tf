@@ -35,3 +35,17 @@ resource "aws_security_group" "allow_ssh" {
   }
 }
 
+resource "aws_ebs_volume" "db_volume" {
+  availability_zone = "us-east-1a"  
+  size              = 20            
+  
+}
+
+
+# resource "aws_ebs_snapshot" "db_snapshot" {
+#   volume_id = aws_ebs_volume.db_volume.id
+#   tags = {
+#     Name        = "ExampleSnapshot"
+#     Environment = "Production"
+#   }
+# }
