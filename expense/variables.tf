@@ -3,6 +3,9 @@
 #3. default values
 #4. variable default value
 
+
+#ec2-Variables
+
 variable "instance_names" {
     type = list
     default = ["db", "backend", "frontend"]
@@ -26,6 +29,8 @@ variable "common_tags" {
     }
 }
 
+#sg-variables
+
 variable "sg_name" {
      default = "allow_ssh"
 }
@@ -48,3 +53,12 @@ variable "allowed_cidr" {
     default = ["0.0.0.0/0"]
 }
 
+#r53-variables
+
+ variable "zone_id" {
+   default = "Z0046586142IG4Z9PCAT0"
+ }
+
+variable "domain_name" {
+  default = "baluthripraridevops.online"
+}
