@@ -18,12 +18,11 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
-variable "tags" {
+variable "common_tags" {
     default = {
         project = "expense"
         Environment = "Dev"
-        Module = "DB"
-        Name = "db"
+        terrafrom = true
     }
 }
 

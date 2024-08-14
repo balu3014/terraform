@@ -1,13 +1,18 @@
 # resource <resource-type> <resource-name>
-resource "aws_instance" "db" {
+resource "aws_instance" "expense" {
+  count = length(var.instance_names)
 
-  ami                    = "ami-0b4f379183e5706b9"
+  ami                    = "ami-0b4f3791835706b9"
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
-  instance_type          = "t3.micro"
+  instance_type         = var.instance_names[count.index] == "db" ? "t3.small" : "t3.micro"
 
-  tags = {
-    Name = "db"
-  }
+  tags = merge(
+    var.common_tags,
+    {
+      Name   = var.instance_names[count.index]
+      Module = var.instance_names[count.index]  # Corrected "Moduel" to "Module" and "instannce_names" to "instance_names"
+    }
+  )
 }
 
 resource "aws_security_group" "allow_ssh" {
