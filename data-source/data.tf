@@ -20,4 +20,8 @@ data "aws_ami" "ami_id" {
 #     name   = "Virtualization-type"
 #     values = ["hvm"]
 #   }
+
+}
+data "aws_vpc" "default"{
+    default = true
 }
