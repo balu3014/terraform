@@ -1,32 +1,5 @@
 
 
-![image](https://github.com/user-attachments/assets/ed1eb61e-80c4-4df2-b073-8d28e1e74479)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #+---------------------+          +---------------------+
 |      Local State    |          |    Remote State     |
@@ -46,6 +19,9 @@
 |    Infrastructure|           |    Infrastructure |
 | (Local Management)|           | (Remote Management)|
 +------------------+           +-------------------+
+
+
+
 
 
 
