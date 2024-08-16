@@ -1,7 +1,7 @@
 # resource <resource-type> <resource-name>
 resource "aws_instance" "db" {
 
-  ami                    = "ami-0b4f379183e5706b9"
+  ami                    = "ami-041e2ea9402c46c32"
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
   instance_type          = "t2.micro"
 
@@ -9,6 +9,7 @@ resource "aws_instance" "db" {
     Name = "db"
   }
 }
+  
 
 resource "aws_security_group" "allow_ssh" {
   name        = "allow_ssh"

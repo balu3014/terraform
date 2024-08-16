@@ -6,6 +6,14 @@ terraform {
     }
   }
 }
+terraform {
+  backend "s3" {
+    bucket = "devops-with-balu"
+    key    = "remote-state"
+    region = "us-east-1"
+    dynamodb_table = "dynamo-DB--locking-s3"
+  }
+}
 
 provider "aws" {
   region = "us-east-1"
